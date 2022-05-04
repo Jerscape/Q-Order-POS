@@ -1,0 +1,216 @@
+:root {
+    --dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #ED4899;
+    --purple: #8B5CF6;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: #fff;
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+
+#new-task-form{
+    display: flex;
+    
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+
+#new-task-submit {
+    color: var(--gray);
+
+}
+
+#new-task-submit {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), 
+    var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+/*food option buttons buttons*/
+
+#sandwich-submit {
+    color: var(--gray);
+    border: 2px;
+    border-color: var(--pink);
+
+}
+
+#sandwich-submit {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), 
+    var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 2px;
+    border-color: var(--pink);
+}
+
+#sandwich-submit:hover {
+    opacity: 0.8;
+}
+
+#sandwich-submit:active {
+    opacity: 0.6;
+
+}
+
+/*end food option buttons buttons*/
+#clear-order {
+    color: var(--gray);
+    border: 2px;
+    border-color: var(--pink);
+
+}
+
+#clear-order {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), 
+    var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 2px;
+    border-color: var(--pink);
+}
+
+#clear-order:hover {
+    opacity: 0.8;
+}
+
+#clear-order:active {
+    opacity: 0.6;
+
+}
+
+
+/* end clear button formatting */
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*end items ordered */
+
+
+ul {
+    list-style-type: none;
+    vertical-align: top;
+}
+
+li{
+    vertical-align: top;
+}
+
+/*grid*/
+
+.food-items-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(3, 100px);
+
+}
+
+/*output*/
+
+.output {
+    grid-column: 1/ -1;  /*this says go from the first to the last column*/
+    background-color: rgba(0,0,0, .75);
+    /* display: flex; */
+    align-items: flex-end;
+    vertical-align: top;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 50vh;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/*buttons*/
+.food-items-grid > button {   /*this selects all buttons*/
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75); /*the .75 indicates it will be only 75% opaque*/
+
+}
+
+.food-items-grid > button:hover {
+    background-color: rgba(255, 255, 255, .90);
+}
+
+.delete {
+    color: red;
+    background-color: #EEE;
+ 
+}
